@@ -14,7 +14,10 @@ public class Cargar {
           ControladoraPersistencia controlPersis=new ControladoraPersistencia();
         
         ControladoraLogica control=new ControladoraLogica();
-        Cliente cli=new Cliente( 15,30,  "facundo", "nn","chaco", 50000,"facundo@gmail.com");
+        
+        //cargar cliente 
+        //para cargar otro cliente modificar el dni
+        Cliente cli=new Cliente( 3,2,  "facundo", "nn","chaco", 50000,"facundo@gmail.com");
         control.crearCliente(cli) ;
         
 //        Tecnico tec=new Tecnico(12, "Jose", "Perez");
