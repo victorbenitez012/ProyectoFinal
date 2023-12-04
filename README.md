@@ -5,3 +5,4 @@ Proyecto Final para la UTN
 
 script de la base de datos 
 https://github.com/victorbenitez012/ProyectoFinal/tree/main/src/script%20base%20de%20datos
+la base de datos se tiene que llamar proyectofinal
