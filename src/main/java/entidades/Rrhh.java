@@ -30,8 +30,7 @@ public class Rrhh implements Serializable {
     @Column
     private Date fechaInicio;
     
-    @OneToOne
-    @JoinColumn(name = "fechaCierre", referencedColumnName = "fechaCierre")
+    @Column
     private Date fechaCierre;
     
     @Column
