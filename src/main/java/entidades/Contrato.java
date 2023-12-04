@@ -21,15 +21,15 @@ public class Contrato implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "idServicio", referencedColumnName = "id")
-    private Cliente Servicio;
+    private Servicio servicio;
 
     public Contrato() {
     }
 
-    public Contrato(int id, Cliente cliente, Cliente Servicio) {
+    public Contrato(int id, Cliente cliente, Servicio servicio) {
         this.id = id;
         this.cliente = cliente;
-        this.Servicio = Servicio;
+        this.servicio = servicio;
     }
 
     public int getId() {
@@ -48,12 +48,12 @@ public class Contrato implements Serializable {
         this.cliente = cliente;
     }
 
-    public Cliente getServicio() {
-        return Servicio;
+    public Servicio getServicio() {
+        return servicio;
     }
 
-    public void setServicio(Cliente Servicio) {
-        this.Servicio = Servicio;
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
     }
     
     

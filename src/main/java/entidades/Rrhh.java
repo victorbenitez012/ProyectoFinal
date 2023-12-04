@@ -21,11 +21,11 @@ public class Rrhh implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "idIncidente", referencedColumnName = "id")
-    private Cliente Incidente;
+    private Incidente incidente;
     
     @ManyToOne
     @JoinColumn(name = "idTecnico", referencedColumnName = "id")
-    private Cliente Tecnico;
+    private Tecnico tecnico;
     
     @Column
     private Date fechaInicio;
@@ -39,11 +39,11 @@ public class Rrhh implements Serializable {
     public Rrhh() {
     }
 
-    public Rrhh(int id, String operador, Cliente Incidente, Cliente Tecnico, Date fechaInicio, Date fechaCierre, Boolean estado) {
+    public Rrhh(int id, String operador, Incidente incidente, Tecnico tecnico, Date fechaInicio, Date fechaCierre, Boolean estado) {
         this.id = id;
         this.operador = operador;
-        this.Incidente = Incidente;
-        this.Tecnico = Tecnico;
+        this.incidente = incidente;
+        this.tecnico = tecnico;
         this.fechaInicio = fechaInicio;
         this.fechaCierre = fechaCierre;
         this.estado = estado;
@@ -65,20 +65,20 @@ public class Rrhh implements Serializable {
         this.operador = operador;
     }
 
-    public Cliente getIncidente() {
-        return Incidente;
+    public Incidente getIncidente() {
+        return incidente;
     }
 
-    public void setIncidente(Cliente Incidente) {
-        this.Incidente = Incidente;
+    public void setIncidente(Incidente incidente) {
+        this.incidente = incidente;
     }
 
-    public Cliente getTecnico() {
-        return Tecnico;
+    public Tecnico getTecnico() {
+        return tecnico;
     }
 
-    public void setTecnico(Cliente Tecnico) {
-        this.Tecnico = Tecnico;
+    public void setTecnico(Tecnico tecnico) {
+        this.tecnico = tecnico;
     }
 
     public Date getFechaInicio() {

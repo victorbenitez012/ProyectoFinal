@@ -25,7 +25,7 @@ public class Incidente implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "idContrato", referencedColumnName = "id")
-    private Cliente Contrato;
+    private Contrato contrato;
     
     @Column
     private String descripcion;
@@ -39,11 +39,11 @@ public class Incidente implements Serializable {
     public Incidente() {
     }
 
-    public Incidente(int id, String operador, Cliente cliente, Cliente Contrato, String descripcion, String tipo, Date fechaCierre) {
+    public Incidente(int id, String operador, Cliente cliente, Contrato contrato, String descripcion, String tipo, Date fechaCierre) {
         this.id = id;
         this.operador = operador;
         this.cliente = cliente;
-        this.Contrato = Contrato;
+        this.contrato = contrato;
         this.descripcion = descripcion;
         this.tipo = tipo;
         this.fechaCierre = fechaCierre;
@@ -73,12 +73,12 @@ public class Incidente implements Serializable {
         this.cliente = cliente;
     }
 
-    public Cliente getContrato() {
-        return Contrato;
+    public Contrato getContrato() {
+        return contrato;
     }
 
-    public void setContrato(Cliente Contrato) {
-        this.Contrato = Contrato;
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 
     public String getDescripcion() {

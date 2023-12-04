@@ -18,20 +18,20 @@ public class AsignarE implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "idTecnico", referencedColumnName = "id")
-    private Cliente Tecnico;
+    private Tecnico tecnico;
     
     @ManyToOne
     @JoinColumn(name = "idEspecialidad", referencedColumnName = "id")
-    private Cliente Especialidad;
+    private Especialidad especialidad;
 
     public AsignarE() {
     }
 
-    public AsignarE(int id, String operador, Cliente Tecnico, Cliente Especialidad) {
+    public AsignarE(int id, String operador, Tecnico tecnico, Especialidad especialidad) {
         this.id = id;
         this.operador = operador;
-        this.Tecnico = Tecnico;
-        this.Especialidad = Especialidad;
+        this.tecnico = tecnico;
+        this.especialidad = especialidad;
     }
 
     public int getId() {
@@ -50,20 +50,20 @@ public class AsignarE implements Serializable {
         this.operador = operador;
     }
 
-    public Cliente getTecnico() {
-        return Tecnico;
+    public Tecnico getTecnico() {
+        return tecnico;
     }
 
-    public void setTecnico(Cliente Tecnico) {
-        this.Tecnico = Tecnico;
+    public void setTecnico(Tecnico tecnico) {
+        this.tecnico = tecnico;
     }
 
-    public Cliente getEspecialidad() {
-        return Especialidad;
+    public Especialidad getEspecialidad() {
+        return especialidad;
     }
 
-    public void setEspecialidad(Cliente Especialidad) {
-        this.Especialidad = Especialidad;
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
     }
     
     
