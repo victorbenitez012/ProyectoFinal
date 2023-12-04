@@ -27,6 +27,9 @@ public class Cliente implements Serializable {
     private String direccion;
     
     @Column
+    private int telefono;
+    
+    @Column
     private String email;
     
     public Cliente(){
@@ -81,12 +84,21 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
-    public Cliente(int id, int dni, String nombre, String apellido, String direccion, String email) {
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public Cliente(int id, int dni, String nombre, String apellido, String direccion, int telefono, String email) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.telefono = telefono;
         this.email = email;
     }
 
